@@ -1,0 +1,12 @@
+config kcptun openvpn
+	option enabled '0'
+	option localaddr ':1194'
+	option remoteaddr 'easypi.info:4911'
+	option key 'secret'
+	list extra_params 'sndwnd=128'
+	list extra_params 'rcvwnd=1024'
+
+config kcptun shadowsocks
+	option enabled '0'
+	option localaddr ':8388'
+	option remoteaddr 'easypi.info:8399'
