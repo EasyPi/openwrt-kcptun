@@ -1,0 +1,25 @@
+sudo: required
+dist: trusty
+language: generic
+services:
+- docker
+env:
+  global:
+  - IMG=easypi/openwrt
+  matrix:
+  - TAG=bcm2708
+  - TAG=bcm2709
+  - TAG=bcm2710
+script:
+- docker version
+- docker pull $IMG:$TAG
+- docker run --rm -u openwrt -w /home/openwrt/sdk -v $PWD:/tmp $IMG:$TAG /tmp/build.sh
+deploy:
+  provider: releases
+  api_key:
+    secure: TeMmiuj9jycsgcCBUwOKD2FHuBPsn9mMGJJb4O/zZj/VtQoJ8H/L/TpqYdhIdy7bHNeLXWtJiVRrdaqGXckKN2duHjOLEXEJpTMch5JAZoq2GMUavYOTW1DjIrHKfpgS3fsqli/0mchUC8K7Fn/NGcANPY9xBmwqZ534khI7X+Jn59p7OnEfOuHXSSlK4rjIRDNC9vA9vRRjWnlSNyEh80jig9esc1MAHLMSOM8cGi2SOgpoe3IxqiN5XtMj5rOgNq+CYVfclMBQs+ekMrYrThepb8kYXMk1bdK8GtZRNVmF076zCwW0Bp7WhLXV6zlz2x+Pt4JULd4auCujMIBJrWIPzaqig0c44BUeI3FQ8kqkcyOHegR58AhTyMl7p1eWzKycfxR89DGjlBDAu73gUw4SVHjP4RXHN9CRtztb+D29QHrVkO7c9MuOHfzdbagEepUxLxZHOA2lhM51R6VFQ2r/1OONhqgCnPufqDh4/NAF9Ci4u5adLb6E1AZ0A6YZyUnfXJKXxACGSQEJAVbbj4ul+XYZ/I77Sy/ZBm8Cj7xvcsLYSBRyZ0ANOt/YYx0P7R22yU+uV/611zP/aoUfSfo57SSLazLPQfBbXKlof0q7PRrG3xUFsc19orzLALkV25yn9jY7bYR2r32eUQy2mFrsI0GCL+8t1zR8wj6IZBM=
+  file_glob: true
+  file: kcptun*.ipk
+  skip_cleanup: true
+  on:
+    tags: true

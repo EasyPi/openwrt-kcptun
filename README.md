@@ -1,10 +1,8 @@
 openwrt-kcptun
 ==============
 
-Current version: [![][1]][2]
-
-[1]: https://img.shields.io/github/release/xtaci/kcptun.svg
-[2]: https://github.com/xtaci/kcptun/releases/latest
+[![Build Status](https://travis-ci.org/EasyPi/openwrt-kcptun.svg?branch=master)](https://travis-ci.org/EasyPi/openwrt-kcptun)
+[![GitHub release](https://img.shields.io/github/release/EasyPi/openwrt-kcptun.svg)]()
 
 kcptun on openwrt for raspberry pi
 
@@ -48,7 +46,7 @@ PKG_MD5SUM:=5573a5053986878696ad35509fc4bf03
 $ cd sdk
 $ git clone https://github.com/EasyPi/openwrt-kcptun.git package/kcptun
 $ make package/kcptun/compile V=s
-$ find ./bin/packages/ -name 'kcptun*.ipk'
+$ find bin -name 'kcptun*.ipk'
 ```
 
 ## Sample config file:
