@@ -1,12 +1,19 @@
 openwrt-kcptun
 ==============
 
-[![][1]][2]
+Current version: [![][1]][2]
 
 [1]: https://img.shields.io/github/release/xtaci/kcptun.svg
 [2]: https://github.com/xtaci/kcptun/releases/latest
 
 kcptun on openwrt for raspberry pi
+
+## How it works
+
+![](https://github.com/xtaci/kcptun/raw/master/kcptun.png)
+
+- This package works in client mode.
+- Please setup a server somewhere.
 
 ## Directory Tree
 
@@ -43,3 +50,25 @@ $ git clone https://github.com/EasyPi/openwrt-kcptun.git package/kcptun
 $ make package/kcptun/compile V=s
 $ find ./bin/packages/ -name 'kcptun*.ipk'
 ```
+
+## Sample config file:
+
+```bash
+# /etc/config/kcptun
+
+config kcptun openvpn
+    option enabled '0'
+    option localaddr ':1194'
+    option remoteaddr 'easypi.info:4911'
+    option key 'secret'
+    list extra_params 'sndwnd=128'
+    list extra_params 'rcvwnd=1024'
+
+config kcptun shadowsocks
+    option enabled '0'
+    option localaddr ':8388'
+    option remoteaddr 'easypi.info:8399'
+```
+
+- You can run multiple kcptun instances.
+- Make sure they listen on different ports.
