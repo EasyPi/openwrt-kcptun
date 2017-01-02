@@ -6,6 +6,8 @@ openwrt-kcptun
 
 kcptun on openwrt for raspberry pi
 
+Latest version: [![](https://img.shields.io/github/release/xtaci/kcptun.svg)]()
+
 ## How it works
 
 ![](https://github.com/xtaci/kcptun/raw/master/kcptun.png)
