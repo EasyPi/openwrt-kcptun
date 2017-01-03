@@ -2,11 +2,11 @@ openwrt-kcptun
 ==============
 
 [![Build Status](https://travis-ci.org/EasyPi/openwrt-kcptun.svg?branch=master)](https://travis-ci.org/EasyPi/openwrt-kcptun)
-[![GitHub release](https://img.shields.io/github/release/EasyPi/openwrt-kcptun.svg)]()
+[![GitHub release](https://img.shields.io/github/release/EasyPi/openwrt-kcptun.svg)](https://github.com/EasyPi/openwrt-kcptun/releases/latest)
 
-kcptun on openwrt for raspberry pi
+Kcptun on OpenWrt for Raspberry Pi (1/2/3)
 
-Latest version: [![](https://img.shields.io/github/release/xtaci/kcptun.svg)]()
+Latest version: [![](https://img.shields.io/github/release/xtaci/kcptun.svg)](https://github.com/xtaci/kcptun/releases/latest)
 
 ## How it works
 
