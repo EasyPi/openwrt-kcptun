@@ -9,7 +9,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=kcptun
-PKG_VERSION:=20161222
+PKG_VERSION:=20170120
 PKG_RELEASE:=1
 
 PKG_LICENSE:=MIT
@@ -18,7 +18,7 @@ PKG_MAINTAINER:=EasyPi Software Foundation
 
 PKG_SOURCE:=$(PKG_NAME)-linux-arm-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://github.com/xtaci/kcptun/releases/download/v$(PKG_VERSION)
-PKG_MD5SUM:=c99b6db1ecf71a725bbe9813822e4997
+PKG_MD5SUM:=f03b8e20a6ec264aef8ce6a7c3daed2e
 PKG_CAT:=zcat
 
 include $(INCLUDE_DIR)/package.mk
