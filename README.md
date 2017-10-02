@@ -34,12 +34,12 @@ openwrt-kcptun
 
 ```bash
 PKG_NAME:=kcptun
-PKG_VERSION:=20170525
+PKG_VERSION:=20170930
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-linux-arm-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://github.com/xtaci/kcptun/releases/download/v$(PKG_VERSION)
-PKG_MD5SUM:=efa273e2438065a319e50c44e7cd68a0e65c05d5
+PKG_MD5SUM:=b40de337d590882cdf0218037662da00caf090e2
 ```
 
 ## Run these commands to build:
